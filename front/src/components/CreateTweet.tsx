@@ -1,19 +1,29 @@
 import { COLORS } from '../services/color';
 import Button from './ui/Button';
-import Input from './ui/Input';
 import { MdGifBox, MdOutlinePhoto } from 'react-icons/md';
+import Textarea from './ui/Textarea';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const CreateTweet = () => {
+  const [text, setText] = useState('');
+
   return (
     <div className="w-full px-2 py-5  flex flex-row border-b-[1px] border-black">
-      <img
-        className="w-12 h-12 rounded-full border-[1px] border-black"
-        src="asa.jpg"
-        alt="profile pic"
-      />
+      <Link to={'/profile/1'}>
+        <img
+          className="w-12 h-12 rounded-full border-[1px] border-black hover:opacity-70"
+          src="asa.jpg"
+          alt="profile pic"
+        />
+      </Link>
       <div className="w-full flex flex-col">
         <div className="w-full px-4">
-          <Input onChange={() => {}} placeholder="What's happening" value="" />
+          <Textarea
+            onChange={(e) => setText(e.target.value)}
+            placeholder="What's happening "
+            value={text}
+          />
         </div>
         <div className="mt-4 px-4 flex justify-between items-center">
           <div className="flex items-center">
