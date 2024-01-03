@@ -16,7 +16,7 @@ const Header: FC<HeaderProps> = ({ returnBack, title }) => {
   }, [router]);
 
   return (
-    <div className="px-4 py-3 border-b-[1px] border-neutral-800 flex items-center">
+    <div className="px-4 py-3 sticky top-0 bg-white border-b-[1px] border-slate-300 flex items-center">
       {returnBack && (
         <div className="mr-5 hover:opacity-50 cursor-pointer" onClick={handleBack}>
           <IoArrowBack size={24} color={COLORS.BLACK} />
