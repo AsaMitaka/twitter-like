@@ -14,33 +14,35 @@ const Sidebar = () => {
     {
       icon: FaHashtag,
       title: 'Explore',
-      href: '/',
+      href: '/explore',
     },
     {
       icon: FaRegBell,
       title: 'Notifications',
-      href: '/',
+      href: '/notifications',
     },
     {
       icon: FaRegUser,
       title: 'Profile',
-      href: '/',
+      href: '/profile/1',
     },
   ];
 
   return (
-    <div className="w-2/5 border-r-[1px] w-[300px] h-full border-neutral-800 flex flex-col px-10">
-      <NavLogo />
-      {navitems &&
-        navitems.map((item, index) => (
-          <NavItem
-            icon={item.icon}
-            key={`${index}_${item.title}`}
-            href={item.href}
-            title={item.title}
-          />
-        ))}
-      <Button actionLabel="Tweet" big rounded />
+    <div className="w-[275px] w-2/5">
+      <div className="sticky top-0 border-neutral-900 flex flex-col px-10">
+        <NavLogo />
+        {navitems &&
+          navitems.map((item, index) => (
+            <NavItem
+              icon={item.icon}
+              key={`${index}_${item.title}`}
+              href={item.href}
+              title={item.title}
+            />
+          ))}
+        <Button actionLabel="Tweet" big rounded />
+      </div>
     </div>
   );
 };
