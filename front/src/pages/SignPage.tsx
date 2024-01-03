@@ -5,7 +5,7 @@ import { FaTwitter } from 'react-icons/fa6';
 import { IoPeopleSharp } from 'react-icons/io5';
 import { COLORS } from '../services/color';
 
-const Sign = () => {
+const SignPage = () => {
   return (
     <div className="flex flex-row h-screen">
       <div className="basis-6/12 bg-sky-500 flex flex-col justify-center items-center">
@@ -43,4 +43,4 @@ const Sign = () => {
   );
 };
 
-export default Sign;
+export default SignPage;
